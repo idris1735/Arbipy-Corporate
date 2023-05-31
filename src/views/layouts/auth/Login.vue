@@ -2,23 +2,16 @@
   <div class="w-full h-screen">
     <div class="flex shadow rounded-md h-screen">
       <div class="bg-white dark:bg-gray-900 w-full">
-        <form>
+        <form @submit.prevent="login">
           <div
             class="form-body lg:max-w-xl mx-auto lg:p-20 p-8 lg:mt-20 mt-5 space-y-8"
           >
-            <div
-              class="form-head cursor-pointer"
-              @click="$router.push('/')"
-            >
-              <img
-                src="../../../assets/logo/logo.svg"
-                alt=""
-                class="w-10"
-              />
+            <div class="form-head cursor-pointer" @click="$router.push('/')">
+              <!-- <img src="../../../assets/logo/logo.svg" alt="" class="w-10" /> -->
             </div>
             <div class="space-y-3">
               <h2 class="dark:text-white font-semibold text-gray-800 text-4xl">
-                Welcome, to Windzo<span class="text-primary">.</span>
+                Welcome, to ARBIPY<span class="text-primary">.</span>
               </h2>
               <p class="dark:text-gray-400 text-gray-700">
                 Please enter your account to continue.
@@ -45,7 +38,7 @@
             <div class="space-y-5">
               <div class="relative z-0 w-full mb-6 group">
                 <input
-                  type="email"
+                  type="text"
                   name="floating_email"
                   id="floating_email"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-primary focus:outline-none focus:ring-0 focus:border-primary peer"
@@ -100,6 +93,7 @@
             </div>
 
             <button
+              type="submit"
               class="text-white bg-primary hover:bg-primary/80 p-3 w-full rounded-md"
             >
               Login, to continue
@@ -124,28 +118,62 @@
 </template>
 
 <script>
-  export default {};
+import axios from 'axios'
+export default {
+  methods: {
+    async login() {
+      try {
+        console.log('Attempting login...')
+
+        // Make a POST request to the login URL with the provided credentials
+        const response = await axios.post(
+          'https://retailer.rnd.riskgratis.com/api/auth/token',
+          {
+            login: 'admin',
+            password: 'P@55Word',
+            db: 'retailer.rnd.riskgratis.com',
+          }
+        )
+
+        console.log('Response:', response)
+
+        // Check if the authentication was successful
+        if (response.status === 200) {
+          console.log('Authentication successful')
+          // Redirect to the dashboard page
+          this.$router.push('/dashboard')
+        } else {
+          // Handle authentication error (e.g., display an error message)
+          console.log('Authentication failed')
+        }
+      } catch (error) {
+        // Handle error (e.g., display an error message)
+        console.log('An error occurred', error)
+      }
+    },
+  },
+}
 </script>
 <style>
-  /* custom pattern https://superdesigner.co/tools/css-backgrounds */
-  .bg-wave {
-    background: radial-gradient(
-        circle at top left,
-        transparent 25%,
-        #4f46e5 25.5%,
-        #4f46e5 36%,
-        transparent 37%,
-        transparent 100%
-      ),
-      radial-gradient(
-        circle at bottom right,
-        transparent 34%,
-        #4f46e5 34.5%,
-        #4f46e5 45.5%,
-        transparent 46%,
-        transparent 100%
-      );
-    background-size: 6em 6em;
-    opacity: 1;
-  }
+/* custom pattern https://superdesigner.co/tools/css-backgrounds */
+.bg-wave {
+  background: radial-gradient(
+      circle at top left,
+      transparent 25%,
+      #4f46e5 25.5%,
+      #4f46e5 36%,
+      transparent 37%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      transparent 34%,
+      #4f46e5 34.5%,
+      #4f46e5 45.5%,
+      transparent 46%,
+      transparent 100%
+    );
+  background-size: 6em 6em;
+  opacity: 1;
+}
 </style>

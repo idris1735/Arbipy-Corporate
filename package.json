@@ -9,13 +9,6 @@
     "windsass": "sass --watch src/assets/sass/app.windzo.scss src/assets/sass/css/windzo.css",
     "require": "npm i -g sass @vue/cli"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sahrullahh/windzo.git"
-  },
-  "homepage": "https://windzo.vercel.app",
-  "author": "Mohammad Sahrullah",
-  "license": "MIT",
   "dependencies": {
     "apexcharts": "^3.34.0",
     "autoprefixer": "^10.4.14",
@@ -23,6 +16,7 @@
     "click-outside-vue3": "^4.0.1",
     "core-js": "^3.8.3",
     "dropzone-vue": "^0.1.11",
+    "firebase": "^9.22.1",
     "flowbite": "^1.4.1",
     "lodash": "^4.17.21",
     "perfect-scrollbar": "^1.5.5",

@@ -3,21 +3,14 @@
   <nav class="sidebar bg-white dark:bg-gray-800">
     <!-- sidebar head -->
     <div class="sidebar-head p-4">
-      <router-link
-        to="/"
-        exact
-        class="flex"
-      >
-        <img
-          class="w-8 mt-1"
-          src="@/assets/logo/logo.svg"
-          alt="logo windzo"
-        />
+      <router-link to="/" exact class="flex">
+        <!-- IMAGE LOGO -->
+        <!-- <img class="w-8 mt-1" src="@/assets/logo/logo.svg" alt="logo windzo" /> -->
         <h2
           class="text-2xl font-normal ml-3 mt-2 text-gray-800 dark:text-gray-200"
           translate="no"
         >
-          Windzo<span class="text-primary">.</span>
+          ARBIPY<span class="text-primary">.</span>
         </h2>
       </router-link>
       <div
@@ -52,7 +45,7 @@
         <div class="wrap-item mt-4 dark:text-gray-500">
           <div class="item">
             <router-link
-              to="/"
+              to="/dashboard"
               exact
               class="w-full flex text-left rounded-md box-border p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
             >
@@ -65,55 +58,33 @@
               <template v-slot:icon>
                 <Icon icon="gg:components" />
               </template>
-              <template v-slot:title> Components </template>
+              <template v-slot:title> Local Transfers </template>
               <template v-slot:content>
                 <router-link
-                  to="/component/alert"
+                  to="/Function_A"
                   class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
                 >
-                  Alert
+                  Transfers Between Own Accounts
+                </router-link>
+
+                <router-link
+                  to="/Function_B"
+                  class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
+                >
+                  Transfer Between Mutual Accounts
+                </router-link>
+
+                <router-link
+                  to="/Function_C"
+                  class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
+                >
+                  Transfer To Other Banks
                 </router-link>
                 <router-link
-                  to="/component/accordion"
+                  to="/Function_D"
                   class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
                 >
-                  Accordion
-                </router-link>
-                <router-link
-                  to="/component/badge"
-                  class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
-                >
-                  Badge
-                </router-link>
-                <router-link
-                  to="/component/breadcumb"
-                  class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
-                >
-                  Breadcumb
-                </router-link>
-                <router-link
-                  to="/component/button"
-                  class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
-                >
-                  Button
-                </router-link>
-                <router-link
-                  to="/component/card"
-                  class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
-                >
-                  Card
-                </router-link>
-                <router-link
-                  to="/component/dropdown"
-                  class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
-                >
-                  Dropdown
-                </router-link>
-                <router-link
-                  to="/component/modal"
-                  class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
-                >
-                  Modal
+                  Bulk Upload Transfers
                 </router-link>
               </template>
             </menu-accordion>
@@ -123,7 +94,7 @@
               <template v-slot:icon>
                 <Icon icon="ri:layout-2-fill" />
               </template>
-              <template v-slot:title> Layouts </template>
+              <template v-slot:title> Loans </template>
               <template v-slot:content>
                 <p>Coming soon.</p>
               </template>
@@ -134,7 +105,7 @@
               <template v-slot:icon>
                 <Icon icon="ri:pages-fill" />
               </template>
-              <template v-slot:title> Pages </template>
+              <template v-slot:title> Payments </template>
               <template v-slot:content>
                 <div class="">
                   <router-link
@@ -197,7 +168,7 @@
       </div>
       <div class="pb-5">
         <p class="font-medium text-gray-400 mt-4 dark:text-gray-400">
-          UI Form & Tables
+          Other Functions
         </p>
 
         <div class="item mt-3">
@@ -205,7 +176,7 @@
             <template v-slot:icon>
               <Icon icon="ant-design:form-outlined" />
             </template>
-            <template v-slot:title> Form Element </template>
+            <template v-slot:title> Coming Soon </template>
             <template v-slot:content>
               <p class="text-gray-800 dark:text-gray-500">Coming soon.</p>
             </template>
@@ -213,12 +184,12 @@
         </div>
 
         <div class="item mt-3">
-          <router-link to="/tables">
+          <router-link to="/signout">
             <button
               class="text-gray-800 dark:text-gray-500 bg-transparent hover:bg-gray-200 dark:hover:bg-gray-700 w-full flex text-left rounded-md box-border p-3"
             >
               <span class="mr-3 text-xl"><Icon icon="bi:table" /></span>
-              <span class="w-full"> Tables </span>
+              <span class="w-full"> Sign Out </span>
               <span class="box-border mt-1 text-gray-500"> </span>
             </button>
           </router-link>
@@ -229,12 +200,12 @@
 </template>
 
 <script>
-  import { Icon } from "@iconify/vue";
-  import MenuAccordion from "./MenuAccordion.vue";
-  export default {
-    components: {
-      Icon,
-      MenuAccordion,
-    },
-  };
+import { Icon } from '@iconify/vue'
+import MenuAccordion from './MenuAccordion.vue'
+export default {
+  components: {
+    Icon,
+    MenuAccordion,
+  },
+}
 </script>

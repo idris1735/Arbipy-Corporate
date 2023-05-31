@@ -2,10 +2,7 @@
   <!-- Search component dropdown with name of type, press Ctrl + F -->
 
   <div class="card-page lg:h-screen h-auto p-3">
-    <nav
-      class="flex"
-      aria-label="Breadcrumb"
-    >
+    <nav class="flex" aria-label="Breadcrumb">
       <ol class="inline-flex items-center space-x-1 md:space-x-3">
         <li class="inline-flex items-center">
           <a
@@ -42,7 +39,7 @@
             <a
               href="#"
               class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white"
-              >Components</a
+              >Local Transfers</a
             >
           </div>
         </li>
@@ -63,7 +60,7 @@
             <a
               href="#"
               class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white"
-              >Dropdown</a
+              >Function C</a
             >
           </div>
         </li>
@@ -71,254 +68,26 @@
     </nav>
     <!-- end nav -->
     <div class="mt-5 w-full">
-      <h1 class="text-2xl text-gray-900 font-medium dark:text-gray-200">
-        Dropdown
-      </h1>
-      <p class="mt-1 text-sm font-normal text-gray-400">
-        Show the location of the current page in a hierarchical structure using
-        the Tailwind CSS breadcrumb components
-      </p>
+      <h1 class="text-2xl text-gray-900 font-medium dark:text-gray-200">Function C</h1>
+      <p class="mt-1 text-sm font-normal text-gray-400">Still blank for Function C</p>
     </div>
     <div class="w-full mt-10 grid grid-cols-1 gap-5">
-      <div
-        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700 bpx"
-      >
-        <h2 class="dark:text-gray-200">Dropdown default</h2>
-        <div class="wrapper-dropdown flex gap-4 w-full box-border mt-4">
-          <dropdown placement="left">
-            <template v-slot:button>
-              <button class="flex px-5 py-3 rounded-md bg-primary text-white">
-                Dropdown
-                <span class="ml-5 mt-1"
-                  ><Icon icon="ant-design:caret-down-filled"
-                /></span>
-              </button>
-            </template>
-            <template v-slot:content>
-              <div class="">
-                <a
-                  href="#"
-                  class="block hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 1</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 2</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 3</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 4</a
-                >
-              </div>
-            </template>
-          </dropdown>
-          <dropdown placement="left">
-            <template v-slot:button>
-              <button
-                class="flex px-5 py-3 rounded-md bg-transparent text-gray-500 border border-gray-300 dark:border-gray-500"
-              >
-                Light
-                <span class="ml-5 mt-1"
-                  ><Icon icon="ant-design:caret-down-filled"
-                /></span>
-              </button>
-            </template>
-            <template v-slot:content>
-              <div class="">
-                <a
-                  href="#"
-                  class="block hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 1</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 2</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 3</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 4</a
-                >
-              </div>
-            </template>
-          </dropdown>
-          <dropdown placement="left">
-            <template v-slot:button>
-              <button
-                class="flex px-5 py-3 rounded-md bg-transparent text-gray-500"
-              >
-                Blank
-                <span class="ml-5 mt-1"
-                  ><Icon icon="ant-design:caret-down-filled"
-                /></span>
-              </button>
-            </template>
-            <template v-slot:content>
-              <div class="">
-                <a
-                  href="#"
-                  class="block hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 1</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 2</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 3</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 4</a
-                >
-              </div>
-            </template>
-          </dropdown>
-        </div>
-      </div>
-      <div
-        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700 bpx"
-      >
-        <h2 class="dark:text-gray-200">Dropdown Icon</h2>
-        <div class="wrapper-dropdown flex gap-4 w-full box-border mt-4">
-          <dropdown placement="left">
-            <template v-slot:button>
-              <button class="flex px-5 py-3 rounded-md bg-primary text-white">
-                <span class="mr-3 mt-1"
-                  ><Icon icon="ci:settings-filled"
-                /></span>
-                Settings
-              </button>
-            </template>
-            <template v-slot:content>
-              <div class="">
-                <a
-                  href="#"
-                  class="block hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 1</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 2</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 3</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 4</a
-                >
-              </div>
-            </template>
-          </dropdown>
-          <dropdown placement="left">
-            <template v-slot:button>
-              <button
-                class="flex px-5 py-3 rounded-md bg-transparent text-gray-500 border border-gray-300 dark:border-gray-500"
-              >
-                <span class="mr-3 mt-1"><Icon icon="cil:smile" /></span>
-                Smile
-              </button>
-            </template>
-            <template v-slot:content>
-              <div class="">
-                <a
-                  href="#"
-                  class="block hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 1</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 2</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 3</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 4</a
-                >
-              </div>
-            </template>
-          </dropdown>
-          <dropdown placement="left">
-            <template v-slot:button>
-              <button
-                class="flex px-5 py-3 rounded-md bg-transparent text-gray-500"
-              >
-                Blank
-                <span class="ml-5 mt-1"
-                  ><Icon icon="ant-design:caret-down-filled"
-                /></span>
-              </button>
-            </template>
-            <template v-slot:content>
-              <div class="">
-                <a
-                  href="#"
-                  class="block hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 1</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 2</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 3</a
-                >
-                <a
-                  href="#"
-                  class="block mt-4 hover:bg-primary hover:text-white px-4 py-2"
-                  >Action 4</a
-                >
-              </div>
-            </template>
-          </dropdown>
-        </div>
-      </div>
+      <!-- ============================== -->
     </div>
   </div>
 </template>
 <script>
-  import { Icon } from "@iconify/vue";
-  import Dropdown from "../../components/Dropdown.vue";
-  export default {
-    components: {
-      Dropdown,
-      Icon,
+import { Icon } from "@iconify/vue";
+import Dropdown from "../../components/Dropdown.vue";
+export default {
+  components: {
+    Dropdown,
+    Icon,
+  },
+  methods: {
+    alert() {
+      alert("Hello");
     },
-    methods: {
-      alert() {
-        alert("Hello");
-      },
-    },
-  };
+  },
+};
 </script>
